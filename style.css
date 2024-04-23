@@ -1,0 +1,89 @@
+:root {
+  --width: 320px;
+  --height: 180px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #212121;
+
+  width: 100dvw;
+  height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.nav {
+  display: flex;
+
+  gap: calc(var(--width) + 2rem);
+
+  position: absolute;
+}
+
+.btn {
+  background-color: #dedede;
+  background-repeat: no-repeat;
+
+  background-size: 10px;
+  background-position: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 100%;
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.prev {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="320 -720 296 480"><path d="M560-240 320-480l240-240 56 56-184 184 184 184z" fill="rgba(0,0,0,.75)" /></svg>');
+  background-position-x: 13.5px;
+  background-position-y: 13px;
+}
+
+.next {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="320 -720 296 480"><path d="M504-480 320-664l56-56 240 240-240 240-56-56z" fill="rgba(0,0,0,.75)" /></svg>');
+  background-position-x: 16.5px;
+  background-position-y: 13px;
+}
+
+.display {
+  background-color: #ffbf00;
+
+  width: var(--width);
+  height: var(--height);
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.slider {
+  background-color: #855cd6;
+
+  height: var(--height);
+
+  position: absolute;
+
+  display: flex;
+
+  gap: 1rem;
+
+  transition: transform 0.5s ease-out;
+}
